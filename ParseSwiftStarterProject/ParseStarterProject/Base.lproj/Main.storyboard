@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Upload View Controller-->
         <scene sceneID="uQ2-K0-kON">
             <objects>
                 <viewController id="Dcn-Nv-M4d" customClass="UploadViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="DNW-zJ-zqm"/>
+                    <tabBarItem key="tabBarItem" title="" image="Camera" id="DNW-zJ-zqm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAv-Eb-BJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="670" y="-469"/>
         </scene>
-        <!--Item-->
+        <!--Profile Posts View Controller-->
         <scene sceneID="rBe-Th-H4U">
             <objects>
                 <viewController id="mYZ-y6-Krh" customClass="ProfilePostsViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,13 +37,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="UpI-O7-sEG"/>
+                    <tabBarItem key="tabBarItem" title="" image="Person" id="UpI-O7-sEG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2an-eZ-9PW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="672" y="313"/>
         </scene>
-        <!--Item 1-->
+        <!--Timeline View Controller-->
         <scene sceneID="OzD-Y1-4vp">
             <objects>
                 <viewController id="fe5-IF-I7D" customClass="TimelineViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="QIS-2X-3NU"/>
+                    <tabBarItem key="tabBarItem" title="" image="Home" id="QIS-2X-3NU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjd-wQ-QwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,4 +83,9 @@
             <point key="canvasLocation" x="-146" y="-469"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="40" height="30"/>
+        <image name="Home" width="32" height="32"/>
+        <image name="Person" width="32" height="32"/>
+    </resources>
 </document>
