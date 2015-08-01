@@ -24,9 +24,9 @@
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
 		81BA81811A49E10C00E65899 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81801A49E10C00E65899 /* ParseUI.framework */; };
 		8A02B394C961363D54BB2B9A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5CA4462EB3446C71B1F22A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		B8FB6CD11B6D806F00816D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB6CD01B6D806F00816D8F /* AppDelegate.swift */; };
 		B8FB6CD51B6D822400816D8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FB6CD41B6D822400816D8F /* CoreLocation.framework */; };
 		B8FB6CFF1B6D8FB300816D8F /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB6CFE1B6D8FB300816D8F /* PhotoTakingHelper.swift */; };
+		B8FB6D011B6D918000816D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB6D001B6D918000816D8F /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,9 +50,9 @@
 		81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		81BA81821A49E27F00E65899 /* ParseStarterProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ParseStarterProject-Bridging-Header.h"; sourceTree = "<group>"; };
-		B8FB6CD01B6D806F00816D8F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8FB6CD41B6D822400816D8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B8FB6CFE1B6D8FB300816D8F /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
+		B8FB6D001B6D918000816D8F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		BCFCD71E90F04FB6B977DD76 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E3ECC1D4FF53653FFCEAAE53 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,8 +109,8 @@
 		81BA81471A49DA1800E65899 /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
-				B8FB6CD01B6D806F00816D8F /* AppDelegate.swift */,
 				81BA814E1A49DA1800E65899 /* Main.storyboard */,
+				B8FB6D001B6D918000816D8F /* AppDelegate.swift */,
 				0782C58D1B6D8D0800A22A2C /* TimelineViewController.swift */,
 				0782C58F1B6D8D1900A22A2C /* UploadViewController.swift */,
 				0782C5911B6D8D2400A22A2C /* ProfilePostsViewController.swift */,
@@ -296,8 +296,8 @@
 				0782C5921B6D8D2400A22A2C /* ProfilePostsViewController.swift in Sources */,
 				0782C5941B6D8D2D00A22A2C /* ProfileCommentsViewController.swift in Sources */,
 				0782C5961B6D8D3500A22A2C /* CategoriesViewController.swift in Sources */,
-				B8FB6CD11B6D806F00816D8F /* AppDelegate.swift in Sources */,
 				B8FB6CFF1B6D8FB300816D8F /* PhotoTakingHelper.swift in Sources */,
+				B8FB6D011B6D918000816D8F /* AppDelegate.swift in Sources */,
 				0782C5901B6D8D1900A22A2C /* UploadViewController.swift in Sources */,
 				0782C58E1B6D8D0800A22A2C /* TimelineViewController.swift in Sources */,
 			);
