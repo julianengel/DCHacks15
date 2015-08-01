@@ -52,12 +52,16 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods/Bolts.framework'
   install_framework 'Pods/Bond.framework'
   install_framework 'Pods/ConvenienceKit.framework'
+  install_framework 'Pods/FBSDKCoreKit.framework'
   install_framework 'Pods/MBProgressHUD.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods/Bolts.framework'
   install_framework 'Pods/Bond.framework'
   install_framework 'Pods/ConvenienceKit.framework'
+  install_framework 'Pods/FBSDKCoreKit.framework'
   install_framework 'Pods/MBProgressHUD.framework'
 fi

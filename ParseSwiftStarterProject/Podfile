@@ -5,3 +5,4 @@ use_frameworks!
 pod 'ConvenienceKit'
 pod 'Bond'
 pod 'MBProgressHUD'
+pod 'FBSDKCoreKit'
