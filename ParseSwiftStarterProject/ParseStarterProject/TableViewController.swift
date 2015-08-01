@@ -104,5 +104,6 @@ class TableViewController : PFQueryTableViewController, CLLocationManagerDelegat
         return obj
     }
 
+    
  
 }
