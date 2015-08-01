@@ -63,14 +63,7 @@ class TableViewController : PFQueryTableViewController, CLLocationManagerDelegat
         alert("Cannot fetch your location")
     }
     
-    
-//    override func queryForTable() -> PFQuery! {
-//        var query = PFQuery(className: "yourClass")
-//        query.orderByAscending("yourObject")
-//        
-//        
-//        return query
-//    }
+
 
     override func queryForTable() -> PFQuery {
         var query = PFQuery(className: "yourClass")
