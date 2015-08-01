@@ -65,5 +65,42 @@ class PhotoTakingHelper : NSObject {
         viewController.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    // MARK: TableViewDataSource
+    func showImagePickerController(sourceType: UIImagePickerControllerSourceType) {
+        imagePickerController = UIImagePickerController()
+        imagePickerController!.sourceType = sourceType
+        pushModalViewController(imagePickerController!)
+        imagePickerController!.delegate = self
+    }
     
+}
+    extension PhotoTakingHelper: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        let filterViewController = FilterViewController(image: image)
+        filterViewController.delegate = self
+        pushModalViewController(filterViewController)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        popModalViewController()
+    }
+    
+}
+
+
+    // MARK: Filters
+
+    extension PhotoTakingHelper: FilterViewControllerDelegate {
+    
+    func filterViewController(controller: FilterViewController, selectedImage: UIImage) {
+        successCallback(selectedImage)
+        // pop all view controllers
+        viewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func filterViewControllerCancelled(controller: FilterViewController) {
+        popModalViewController()
+    }
+
 }
