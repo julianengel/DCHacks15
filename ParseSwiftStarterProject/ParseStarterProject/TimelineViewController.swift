@@ -14,6 +14,7 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     @IBOutlet weak var tableView: UITableView!
     
     var photoTakingHelper: PhotoTakingHelper?
+    var uploader: UploadViewController?
     
     // Timeline Component Protocol
     let defaultRange = 0...4
@@ -51,11 +52,12 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     
     func takePhoto() {
         // instantiate photo taking class, provide callback for when photo is selected
-        photoTakingHelper =
-            PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
-                let post = Post()
-                post.image.value = image!
-                post.uploadPost()
+   
+        
+        uploader = UploadViewController(viewController: self.tabBarController!) { (image: UIImage?) in
+            let post = Post()
+            post.image.value = image!
+            post.uploadPost()
         }
     }
     
