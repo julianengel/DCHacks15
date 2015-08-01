@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0782C58E1B6D8D0800A22A2C /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782C58D1B6D8D0800A22A2C /* TimelineViewController.swift */; };
+		0782C5901B6D8D1900A22A2C /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782C58F1B6D8D1900A22A2C /* UploadViewController.swift */; };
+		0782C5921B6D8D2400A22A2C /* ProfilePostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782C5911B6D8D2400A22A2C /* ProfilePostsViewController.swift */; };
+		0782C5941B6D8D2D00A22A2C /* ProfileCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782C5931B6D8D2D00A22A2C /* ProfileCommentsViewController.swift */; };
+		0782C5961B6D8D3500A22A2C /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782C5951B6D8D3500A22A2C /* CategoriesViewController.swift */; };
 		81BA81501A49DA1800E65899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BA814E1A49DA1800E65899 /* Main.storyboard */; };
 		81BA81521A49DA1800E65899 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BA81511A49DA1800E65899 /* Images.xcassets */; };
 		81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA816B1A49DB6800E65899 /* Bolts.framework */; };
@@ -24,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0782C58D1B6D8D0800A22A2C /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		0782C58F1B6D8D1900A22A2C /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		0782C5911B6D8D2400A22A2C /* ProfilePostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePostsViewController.swift; sourceTree = "<group>"; };
+		0782C5931B6D8D2D00A22A2C /* ProfileCommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCommentsViewController.swift; sourceTree = "<group>"; };
+		0782C5951B6D8D3500A22A2C /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		1C5CA4462EB3446C71B1F22A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BA81451A49DA1800E65899 /* ParseStarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseStarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BA81491A49DA1800E65899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +109,11 @@
 			children = (
 				B8FB6CD01B6D806F00816D8F /* AppDelegate.swift */,
 				81BA814E1A49DA1800E65899 /* Main.storyboard */,
+				0782C58D1B6D8D0800A22A2C /* TimelineViewController.swift */,
+				0782C58F1B6D8D1900A22A2C /* UploadViewController.swift */,
+				0782C5911B6D8D2400A22A2C /* ProfilePostsViewController.swift */,
+				0782C5931B6D8D2D00A22A2C /* ProfileCommentsViewController.swift */,
+				0782C5951B6D8D3500A22A2C /* CategoriesViewController.swift */,
 				81BA81511A49DA1800E65899 /* Images.xcassets */,
 				81BA81481A49DA1800E65899 /* Supporting Files */,
 			);
@@ -275,7 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0782C5921B6D8D2400A22A2C /* ProfilePostsViewController.swift in Sources */,
+				0782C5941B6D8D2D00A22A2C /* ProfileCommentsViewController.swift in Sources */,
+				0782C5961B6D8D3500A22A2C /* CategoriesViewController.swift in Sources */,
 				B8FB6CD11B6D806F00816D8F /* AppDelegate.swift in Sources */,
+				0782C5901B6D8D1900A22A2C /* UploadViewController.swift in Sources */,
+				0782C58E1B6D8D0800A22A2C /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
