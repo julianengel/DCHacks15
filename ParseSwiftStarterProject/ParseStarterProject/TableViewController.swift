@@ -66,17 +66,6 @@ class TableViewController : PFQueryTableViewController, CLLocationManagerDelegat
 
 
     override func queryForTable() -> PFQuery {
-        var query = PFQuery(className: "yourClass")
-            query.orderByAscending("yourObject")
-        
-        
-    return query
-
-    }
-    
-    
-    
-    /*override func queryForTable(){
         let query = PFQuery(className: "Yak")
         if let queryLoc = currLocation {
             query.whereKey("location", nearGeoPoint: PFGeoPoint(latitude: queryLoc.latitude, longitude: queryLoc.longitude), withinMiles: 10)
@@ -89,8 +78,21 @@ class TableViewController : PFQueryTableViewController, CLLocationManagerDelegat
             query.orderByDescending("createdAt")
         }
         
+        return query
+        
     }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        locationManager.stopUpdatingLocation()
+        if(locations.count > 0){
+            let location = locations[0] as! CLLocation
+            println(location.coordinate)
+            currLocation = location.coordinate
+        } else {
+            alert("Cannot fetch your location")
+        }
+    }
+    
 
-*/
-
+ 
 }
