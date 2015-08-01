@@ -8,7 +8,7 @@
         <!--Item 2-->
         <scene sceneID="uQ2-K0-kON">
             <objects>
-                <viewController id="Dcn-Nv-M4d" sceneMemberID="viewController">
+                <viewController id="Dcn-Nv-M4d" customClass="UploadViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xmW-MR-EsX"/>
                         <viewControllerLayoutGuide type="bottom" id="DYE-Ve-L3k"/>
@@ -27,7 +27,7 @@
         <!--Item-->
         <scene sceneID="rBe-Th-H4U">
             <objects>
-                <viewController id="mYZ-y6-Krh" sceneMemberID="viewController">
+                <viewController id="mYZ-y6-Krh" customClass="ProfilePostsViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HbZ-Se-QwE"/>
                         <viewControllerLayoutGuide type="bottom" id="g7J-ND-Enr"/>
@@ -46,7 +46,7 @@
         <!--Item 1-->
         <scene sceneID="OzD-Y1-4vp">
             <objects>
-                <viewController id="fe5-IF-I7D" sceneMemberID="viewController">
+                <viewController id="fe5-IF-I7D" customClass="TimelineViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0FY-FF-KX5"/>
                         <viewControllerLayoutGuide type="bottom" id="D72-8t-4jJ"/>
