@@ -54,7 +54,63 @@
                     <view key="view" contentMode="scaleToFill" id="9p3-hC-CHm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dc8-PK-rt3">
+                                <rect key="frame" x="0.0" y="-15" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXh-R8-pIk">
+                                <rect key="frame" x="0.0" y="20" width="300" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.16470588235294117" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="i9V-Ze-2sk"/>
+                                </constraints>
+                                <state key="normal" image="Fire">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EA0-AC-1TV">
+                                <rect key="frame" x="300" y="20" width="300" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.1647058824" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="SW7-I4-BPd"/>
+                                </constraints>
+                                <state key="normal" image="Category">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="W5X-kc-v2h">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ot1-Kj-J0b">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ot1-Kj-J0b" id="iMe-LE-eGR">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="W5X-kc-v2h" secondAttribute="trailing" id="65K-py-6pk"/>
+                            <constraint firstItem="tXh-R8-pIk" firstAttribute="leading" secondItem="9p3-hC-CHm" secondAttribute="leading" id="Clb-QW-FSt"/>
+                            <constraint firstItem="tXh-R8-pIk" firstAttribute="top" secondItem="0FY-FF-KX5" secondAttribute="bottom" id="M9q-U5-Hcw"/>
+                            <constraint firstItem="D72-8t-4jJ" firstAttribute="top" secondItem="W5X-kc-v2h" secondAttribute="bottom" id="O5r-a9-5gD"/>
+                            <constraint firstItem="W5X-kc-v2h" firstAttribute="leading" secondItem="9p3-hC-CHm" secondAttribute="leading" id="X0d-eh-hR1"/>
+                            <constraint firstItem="EA0-AC-1TV" firstAttribute="top" secondItem="0FY-FF-KX5" secondAttribute="bottom" id="cJ2-rp-DfJ"/>
+                            <constraint firstItem="tXh-R8-pIk" firstAttribute="width" secondItem="EA0-AC-1TV" secondAttribute="width" id="cpR-xk-mGr"/>
+                            <constraint firstItem="EA0-AC-1TV" firstAttribute="leading" secondItem="tXh-R8-pIk" secondAttribute="trailing" id="htZ-Ec-dU7"/>
+                            <constraint firstAttribute="trailing" secondItem="EA0-AC-1TV" secondAttribute="trailing" id="o1v-Nj-2rw"/>
+                            <constraint firstItem="W5X-kc-v2h" firstAttribute="top" secondItem="EA0-AC-1TV" secondAttribute="bottom" id="rrg-EM-7cT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dc8-PK-rt3"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Home" id="QIS-2X-3NU"/>
                 </viewController>
@@ -85,6 +141,8 @@
     </scenes>
     <resources>
         <image name="Camera" width="40" height="30"/>
+        <image name="Category" width="32" height="32"/>
+        <image name="Fire" width="32" height="32"/>
         <image name="Home" width="32" height="32"/>
         <image name="Person" width="32" height="32"/>
     </resources>
