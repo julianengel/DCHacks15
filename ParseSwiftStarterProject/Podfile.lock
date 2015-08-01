@@ -1,0 +1,16 @@
+PODS:
+  - Bond (3.9.0)
+  - ConvenienceKit (0.2.0)
+  - MBProgressHUD (0.9.1)
+
+DEPENDENCIES:
+  - Bond
+  - ConvenienceKit
+  - MBProgressHUD
+
+SPEC CHECKSUMS:
+  Bond: 994ccc56aebfe2707d7b5e76f6d665a5beefa45b
+  ConvenienceKit: 947032f82c3d419d107e0cbde1fcb725e9c7ed62
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+
+COCOAPODS: 0.38.2
