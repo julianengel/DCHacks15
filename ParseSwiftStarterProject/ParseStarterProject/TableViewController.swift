@@ -93,6 +93,16 @@ class TableViewController : PFQueryTableViewController, CLLocationManagerDelegat
         }
     }
     
+    override func objectAtIndexPath(indexPath: NSIndexPath!) -> PFObject? {
+        var obj : PFObject? = nil
+        
+        if(indexPath.row < self.objects?.count){
+            obj = self.objects[indexPath.row] as! PFObject
+        }
+        
+        
+        return obj
+    }
 
  
 }
