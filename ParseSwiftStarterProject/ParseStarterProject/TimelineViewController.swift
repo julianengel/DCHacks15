@@ -27,7 +27,7 @@ class TimelineViewController: UIViewController {
 extension TimelineViewController: UITabBarControllerDelegate {
 
   func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
-    if (viewController is PhotoViewController) {
+    if (viewController is UploadViewController) {
       println("Take Photo")
       return false
     } else {
