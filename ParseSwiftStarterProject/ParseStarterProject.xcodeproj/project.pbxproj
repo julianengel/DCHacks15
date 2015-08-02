@@ -31,6 +31,8 @@
 		B84186641B6E013100551F9D /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186611B6E013100551F9D /* CommentsTableViewController.swift */; };
 		B84186651B6E013100551F9D /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186621B6E013100551F9D /* ComposeViewController.swift */; };
 		B84186681B6E044600551F9D /* ImageUploaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186671B6E044600551F9D /* ImageUploaderViewController.swift */; };
+		B84186721B6E280400551F9D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186711B6E280400551F9D /* Post.swift */; };
+		B84186741B6E2ADF00551F9D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186731B6E2ADF00551F9D /* Register.swift */; };
 		B8FB6CD51B6D822400816D8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FB6CD41B6D822400816D8F /* CoreLocation.framework */; };
 		B8FB6D011B6D918000816D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB6D001B6D918000816D8F /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		B84186611B6E013100551F9D /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
 		B84186621B6E013100551F9D /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		B84186671B6E044600551F9D /* ImageUploaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploaderViewController.swift; sourceTree = "<group>"; };
+		B84186711B6E280400551F9D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B84186731B6E2ADF00551F9D /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		B8FB6CD41B6D822400816D8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B8FB6D001B6D918000816D8F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		BCFCD71E90F04FB6B977DD76 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +128,9 @@
 			children = (
 				81BA814E1A49DA1800E65899 /* Main.storyboard */,
 				B84186671B6E044600551F9D /* ImageUploaderViewController.swift */,
+				B84186731B6E2ADF00551F9D /* Register.swift */,
 				B841865B1B6DF81900551F9D /* HomeViewController.swift */,
+				B84186711B6E280400551F9D /* Post.swift */,
 				B8FB6D001B6D918000816D8F /* AppDelegate.swift */,
 				B841865E1B6E00F900551F9D /* Downloader.swift */,
 				B84186601B6E013100551F9D /* CommentingViewController.swift */,
@@ -324,9 +330,11 @@
 				B84186581B6DF7A300551F9D /* ProfilePostsViewController.swift in Sources */,
 				B84186551B6DF7A300551F9D /* PhotoTaker.swift in Sources */,
 				B84186651B6E013100551F9D /* ComposeViewController.swift in Sources */,
+				B84186721B6E280400551F9D /* Post.swift in Sources */,
 				B84186591B6DF7A300551F9D /* ProfileCommentsViewController.swift in Sources */,
 				B841865C1B6DF81900551F9D /* HomeViewController.swift in Sources */,
 				B84186571B6DF7A300551F9D /* PhotoViewController.swift in Sources */,
+				B84186741B6E2ADF00551F9D /* Register.swift in Sources */,
 				B84186631B6E013100551F9D /* CommentingViewController.swift in Sources */,
 				B841865F1B6E00F900551F9D /* Downloader.swift in Sources */,
 				B8FB6D011B6D918000816D8F /* AppDelegate.swift in Sources */,

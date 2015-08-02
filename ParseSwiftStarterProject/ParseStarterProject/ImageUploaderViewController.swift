@@ -63,7 +63,7 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         post["imageFile"] = imageFile
         post["category"] = category
         post["user"] = user
-        post.saveInBackground()
+        post.saveInBackgroundWithBlock(nil)
         println("sucess")
         
         clean()

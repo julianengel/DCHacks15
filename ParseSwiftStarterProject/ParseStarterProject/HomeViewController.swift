@@ -32,8 +32,17 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func viewWillAppear(animated: Bool) {
     super.viewDidAppear(true)
         
-        let postsFromFollowedUsers = PFQuery(className: "Post")
-        postsFromFollowedUsers!.whereKey("user", matchesKey: "toUser", inQuery: followingQuery)
+        let hotPosts = PFQuery(className: "Post")
+        hotPosts.whereKey("status", equalTo: "hot")
+        hotPosts.orderByAscending("createdAt")
+        
+        // 7
+        hotPosts.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
+            // 8
+          //  self.posts = result as? [Post] ?? []
+            // 9
+            self.tableView.reloadData()
+        }
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
