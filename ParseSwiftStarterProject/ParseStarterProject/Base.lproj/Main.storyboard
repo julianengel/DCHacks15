@@ -171,7 +171,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="zEP-N1-c2h" kind="show" identifier="ShowComments" id="hPC-Qm-4kX"/>
+                                    <segue destination="zEP-N1-c2h" kind="showDetail" identifier="ShowComments" id="hPC-Qm-4kX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEn-wi-ziV">
@@ -344,10 +344,10 @@
             </objects>
             <point key="canvasLocation" x="670" y="265"/>
         </scene>
-        <!--View Controller-->
+        <!--Comments Table View Controller-->
         <scene sceneID="Uae-NI-Y9q">
             <objects>
-                <viewController id="zEP-N1-c2h" sceneMemberID="viewController">
+                <viewController id="zEP-N1-c2h" customClass="CommentsTableViewController" customModule="Fire_Feed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Y0-fW-ycy"/>
                         <viewControllerLayoutGuide type="bottom" id="rlN-pW-2YS"/>
@@ -515,7 +515,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="nFE-fe-LZg" kind="show" identifier="ShowCategories" id="a1t-mB-cTj"/>
+                                    <segue destination="nFE-fe-LZg" kind="showDetail" identifier="ShowCategories" id="a1t-mB-cTj"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="440" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="W5X-kc-v2h">
@@ -792,6 +792,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lpG-JW-nDj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tu2-lQ-Hkn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-L9-IY5">

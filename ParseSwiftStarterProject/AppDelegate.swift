@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
     
     
-    PFUser.logInWithUsername("test", password: "tesdt")
+    PFUser.logInWithUsername("test", password: "test")
     
     
     if let user = PFUser.currentUser() {
