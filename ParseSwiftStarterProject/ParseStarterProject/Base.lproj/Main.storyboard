@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PyD-rO-8MZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -200,7 +201,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GqB-Dl-VOH" id="Rvz-Tt-8I9">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gPq-D5-eDI">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gPq-D5-eDI">
                                                     <rect key="frame" x="0.0" y="8" width="600" height="336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="320" id="IY6-qd-SeH"/>
@@ -236,7 +237,7 @@
                                                         <rect key="frame" x="8" y="400" width="32" height="32"/>
                                                     </variation>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-Th-gAP">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-Th-gAP">
                                                     <rect key="frame" x="560" y="344" width="32" height="32"/>
                                                     <state key="normal" image="Upvote">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -256,14 +257,11 @@
                                                         <rect key="frame" x="360" y="400" width="32" height="32"/>
                                                     </variation>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TW-xe-vQn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TW-xe-vQn">
                                                     <rect key="frame" x="571" y="376" width="11.5" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="370" y="376" width="12" height="24"/>
-                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-7a-hwM">
                                                     <rect key="frame" x="80" y="411" width="88.5" height="21"/>
@@ -411,7 +409,7 @@
                                     <segue destination="Vli-4Q-w6q" kind="unwind" unwindAction="unwindToSegue:" id="Ulz-hD-nYD"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="prq-IF-v2S">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="prq-IF-v2S">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -726,7 +724,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VPh-7s-tsQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VPh-7s-tsQ">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -790,6 +788,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lpG-JW-nDj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tu2-lQ-Hkn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-L9-IY5">
@@ -830,18 +829,6 @@
                                     <action selector="register" destination="x7z-w2-oFb" eventType="touchUpInside" id="VLV-BB-EEo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyP-8m-rvs">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="312" y="497" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="login" destination="x7z-w2-oFb" eventType="touchUpInside" id="KOu-nP-k4a"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -866,15 +853,14 @@
                                 <exclude reference="5rr-Y5-ASN"/>
                                 <exclude reference="s3S-mU-RVt"/>
                                 <exclude reference="neU-9x-H4E"/>
-                                <exclude reference="IyP-8m-rvs"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="a8N-xI-Lro"/>
+                                <exclude reference="y5Y-VR-ViJ"/>
                                 <exclude reference="NSm-1l-liv"/>
                                 <exclude reference="OKy-tT-xmH"/>
                                 <exclude reference="X7y-wz-4Ik"/>
                                 <exclude reference="iGC-8e-hKw"/>
-                                <exclude reference="a8N-xI-Lro"/>
-                                <exclude reference="y5Y-VR-ViJ"/>
                                 <exclude reference="Bee-Hu-2YV"/>
                                 <exclude reference="Ia2-ZN-zGR"/>
                                 <exclude reference="ll8-3O-2eU"/>
@@ -889,15 +875,14 @@
                                 <include reference="5rr-Y5-ASN"/>
                                 <include reference="s3S-mU-RVt"/>
                                 <include reference="neU-9x-H4E"/>
-                                <include reference="IyP-8m-rvs"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="a8N-xI-Lro"/>
+                                <include reference="y5Y-VR-ViJ"/>
                                 <include reference="NSm-1l-liv"/>
                                 <include reference="OKy-tT-xmH"/>
                                 <include reference="X7y-wz-4Ik"/>
                                 <include reference="iGC-8e-hKw"/>
-                                <include reference="a8N-xI-Lro"/>
-                                <include reference="y5Y-VR-ViJ"/>
                                 <include reference="Bee-Hu-2YV"/>
                                 <include reference="Ia2-ZN-zGR"/>
                                 <include reference="ll8-3O-2eU"/>

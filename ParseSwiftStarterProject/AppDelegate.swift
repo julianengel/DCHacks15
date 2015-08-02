@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
     
     
-    
+    PFUser.logInWithUsername("Jeek", password: "Testowania")
     if let user = PFUser.currentUser() {
         println("Log in successful")
         
@@ -33,6 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = initialViewControlleripad
         self.window?.makeKeyAndVisible()
+        
+        
+        
 
     } else {
        

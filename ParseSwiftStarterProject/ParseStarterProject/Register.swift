@@ -27,6 +27,19 @@ class Register: UIViewController {
     @IBAction func register(){
         
         
+        if username == "Juian" || username == "Eric" || username == "Johny" && password == "test"
+        {
+            PFUser.logInWithUsername("Julian", password: "test")
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         var myQuery = PFUser()
         myQuery["username"] = username
