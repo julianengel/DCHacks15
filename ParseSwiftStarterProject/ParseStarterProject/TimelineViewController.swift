@@ -19,6 +19,10 @@ class TimelineViewController: UIViewController {
 
     self.tabBarController?.delegate = self
   }
+    
+    @IBAction func unwindToSegue(segue: UIStoryboardSegue) {
+        
+    }
 
 }
 
