@@ -461,10 +461,10 @@
             </objects>
             <point key="canvasLocation" x="1462" y="265"/>
         </scene>
-        <!--Timeline View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="OzD-Y1-4vp">
             <objects>
-                <viewController id="fe5-IF-I7D" customClass="TimelineViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fe5-IF-I7D" customClass="HomeViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0FY-FF-KX5"/>
                         <viewControllerLayoutGuide type="bottom" id="D72-8t-4jJ"/>
@@ -512,7 +512,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ot1-Kj-J0b">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ot1-Kj-J0b">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ot1-Kj-J0b" id="iMe-LE-eGR">
@@ -618,6 +618,10 @@
                                         <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fe5-IF-I7D" id="gYD-GO-exr"/>
+                                    <outlet property="delegate" destination="fe5-IF-I7D" id="vgm-jd-z9I"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -635,6 +639,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Home" id="QIS-2X-3NU"/>
+                    <connections>
+                        <outlet property="tableView" destination="W5X-kc-v2h" id="ZpX-sc-07z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjd-wQ-QwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
