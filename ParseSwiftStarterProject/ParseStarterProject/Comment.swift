@@ -1,32 +1,24 @@
 //
-//  Post.swift
-//  ParseStarterProject
+//  Comment.swift
+//  Fire Feed
 //
-//  Created by Julian Engel on 8/2/15.
+//  Created by Eric Kim on 8/2/15.
 //  Copyright (c) 2015 Parse. All rights reserved.
 //
 
 import Foundation
 import Parse
 
-// 1
-class Post : PFObject, PFSubclassing {
+class Comment: PFObject, PFSubclassing {
     
-    // 2
-    @NSManaged var imageFile: PFFile?
-    @NSManaged var user: PFUser?
-    
-    var image: UIImage!
-    var comments: [String] = []
-    
-    //MARK: PFSubclassing Protocol
-    
-    // 3
+    @NSManaged var toPost: Post?
+    @NSManaged var voteCount: PFObject?
+    @NSManaged var text: PFObject?
+   
     static func parseClassName() -> String {
-        return "Post"
+        return "Comment"
     }
     
-    // 4
     override init () {
         super.init()
     }

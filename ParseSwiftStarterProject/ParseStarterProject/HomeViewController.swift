@@ -59,15 +59,15 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             self.tableView.reloadData()
         }
     }
-
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.registerClass(TimelineTableViewCell.self, forCellReuseIdentifier: "PostCell")
+    }
+    
+    func unwindToSegue(segue: UIStoryboardSegue) {
+        
     }
     
 }
