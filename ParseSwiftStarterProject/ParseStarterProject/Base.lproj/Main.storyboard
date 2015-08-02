@@ -32,14 +32,14 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJY-fA-gJl">
-                                <rect key="frame" x="250" y="155" width="100" height="50"/>
+                                <rect key="frame" x="220" y="140" width="160" height="80"/>
                                 <color key="backgroundColor" red="1" green="0.1647058824" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LvZ-Dn-B13"/>
-                                    <constraint firstAttribute="width" constant="100" id="drg-kv-jE4"/>
+                                    <constraint firstAttribute="height" constant="80" id="LvZ-Dn-B13"/>
+                                    <constraint firstAttribute="width" constant="160" id="drg-kv-jE4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Upload">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -55,7 +55,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvX-BE-iWC">
-                                <rect key="frame" x="250" y="441" width="100" height="50"/>
+                                <rect key="frame" x="250" y="481" width="100" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.1647058824" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="318-XC-nYS"/>
@@ -64,7 +64,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="zNM-wa-VZs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <state key="normal" title="Upload">
+                                <state key="normal" title="Submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -90,7 +90,7 @@
                             <constraint firstItem="OJY-fA-gJl" firstAttribute="centerY" secondItem="6yJ-5r-usA" secondAttribute="centerY" id="DtF-ie-GXg"/>
                             <constraint firstAttribute="centerX" secondItem="MvX-BE-iWC" secondAttribute="centerX" id="IYO-tP-frT"/>
                             <constraint firstItem="OJY-fA-gJl" firstAttribute="centerX" secondItem="6yJ-5r-usA" secondAttribute="centerX" id="M8l-re-0CB"/>
-                            <constraint firstItem="DYE-Ve-L3k" firstAttribute="top" relation="lessThanOrEqual" secondItem="MvX-BE-iWC" secondAttribute="bottom" constant="60" id="n2t-Ly-mtW"/>
+                            <constraint firstItem="DYE-Ve-L3k" firstAttribute="top" relation="lessThanOrEqual" secondItem="MvX-BE-iWC" secondAttribute="bottom" constant="20" id="n2t-Ly-mtW"/>
                             <constraint firstItem="6yJ-5r-usA" firstAttribute="top" secondItem="O9o-eg-6lG" secondAttribute="topMargin" constant="20" id="tiI-tF-aLM"/>
                             <constraint firstAttribute="centerX" secondItem="6yJ-5r-usA" secondAttribute="centerX" id="zBV-YR-rtH"/>
                         </constraints>
@@ -355,11 +355,7 @@
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l90-r1-sjs">
-<<<<<<< Updated upstream
                                                     <rect key="frame" x="8" y="367.5" width="70.5" height="23.5"/>
-=======
-                                                    <rect key="frame" x="8" y="281" width="71" height="24"/>
->>>>>>> Stashed changes
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -385,13 +381,8 @@
                                                     </state>
                                                     <state key="selected" image="Downvote-Color"/>
                                                 </button>
-<<<<<<< Updated upstream
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-3W-AWZ">
-                                                    <rect key="frame" x="571" y="375.5" width="11.5" height="23.5"/>
-=======
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-3W-AWZ">
                                                     <rect key="frame" x="571" y="289" width="12" height="24"/>
->>>>>>> Stashed changes
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
