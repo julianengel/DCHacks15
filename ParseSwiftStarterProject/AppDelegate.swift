@@ -15,66 +15,16 @@ import ParseUI
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  var parseLoginHelper: ParseLoginHelper!
 
-  override init() {
-    super.init()
-    
-    parseLoginHelper = ParseLoginHelper {[unowned self] user, error in
-      // Initialize the ParseLoginHelper with a callback
-      if let error = error {
-        ErrorHandling.defaultErrorHandler(error)
-      } else  if let user = user {
-        // if login was successful, display the TabBarController
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
-        
-        self.window?.rootViewController!.presentViewController(tabBarController, animated:true, completion:nil)
-      }
-    }
-  }
-  
+
+   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
     // Set up the Parse SDK
     Parse.setApplicationId("U1fn3pXGMUA8SvOqKgrpTXTKcW7jAbl8eGKpIOQc", clientKey: "EDx3EhQRmXFuoxyzXoL6bV7utRy0xKAYyHZpo2Zm")
     
-    // Set default ACL
-    let acl = PFACL()
-    acl.setPublicReadAccess(true)
-    PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
-    
-    // Initialize facebook
-    PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
-    
-    // check if we have logged in user
-    let user = PFUser.currentUser()
-    
-    let startViewController: UIViewController;
-    
-    if (user != nil) {
-      // if we have a user, set the TabBarController to be the initial View Controller
-      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      startViewController = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
-    } else {
-      // Otherwise set the LoginViewController to be the first
-      let loginViewController = PFLogInViewController()
-      loginViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten | .Facebook
-      loginViewController.delegate = parseLoginHelper
-      loginViewController.signUpController?.delegate = parseLoginHelper
-      
-      startViewController = loginViewController
+  return true
     }
-    
-    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-    self.window?.rootViewController = startViewController;
-    self.window?.makeKeyAndVisible()
-    
-    // make white the default color for selected tab bar entries
-    UITabBar.appearance().tintColor = UIColor.whiteColor()
-    
-    return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-  }
 
   func applicationWillResignActive(application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
