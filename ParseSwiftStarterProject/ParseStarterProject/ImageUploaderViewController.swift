@@ -11,6 +11,7 @@ import Parse
 class ImageUploaderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
     {
     
+    @IBOutlet weak var uploadBtn: UIButton!
     @IBOutlet weak var captionTextField: UITextField!
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet var imageView: UIImageView!
@@ -32,6 +33,7 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
+        uploadBtn.hidden = true
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
@@ -40,12 +42,17 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .ScaleAspectFit
             imageView.image = pickedImage
+            imageView.frame.origin.y = 00
         }
     
         dismissViewControllerAnimated(true, completion: nil)
         
     }
     
+   @IBAction func dismissKeyboard(sender: AnyObject){
+        
+        self.resignFirstResponder()
+    }
     @IBAction func submitPressed()
     {
         let image = imageView.image
@@ -68,6 +75,7 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         println("success")
         
         clean()
+        uploadBtn.hidden = false
         tabBarController?.selectedIndex = 0
         
         
