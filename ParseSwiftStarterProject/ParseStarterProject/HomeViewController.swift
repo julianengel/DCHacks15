@@ -10,20 +10,21 @@ import UIKit
 import Parse
 
 
-let reuseIdentifier = "Cell"
-
 class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView : UITableView!
     let postsQuery = PFQuery(className: "Post")
+    var posts = [Post]()
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return posts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
-          var cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        let cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as! TimelineTableViewCell
+        
+        cell.post = posts[indexPath.row]
         
         return cell
     }
@@ -39,7 +40,7 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         // 7
         hotPosts.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
             // 8
-          //  self.posts = result as? [Post] ?? []
+            self.posts = result as? [Post] ?? []
             // 9
             self.tableView.reloadData()
         }
