@@ -71,6 +71,7 @@ extension PhotoTaker: UIImagePickerControllerDelegate, UINavigationControllerDel
         viewController.dismissViewControllerAnimated(false, completion: nil)
         
         callback(image)
+        println("all gay at the call back")
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {

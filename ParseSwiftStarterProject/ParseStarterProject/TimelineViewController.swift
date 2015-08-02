@@ -19,6 +19,13 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "baraa"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            println("Object has been saved again.")
+        }
+        
+         super.viewDidLoad()
         self.tabBarController?.delegate = self
     }
     
@@ -28,13 +35,22 @@ class TimelineViewController: UIViewController {
 
 extension TimelineViewController: UITabBarControllerDelegate {
     
-    func takePhoto() {
-        // instantiate photo taking class, provide callback for when photo  is selected
-        photoTakingHelper = PhotoTaker(viewController: self.tabBarController!) { (image: UIImage?) in println("received a callback")
-            // don't do anything, yet...
-        }
+    
+      
+        func takePhoto() {
+            // instantiate photo taking class, provide callback for when photo  is selected
+            PhotoTaker(viewController: self.tabBarController!, callback: { (image: UIImage?) in let imageData = UIImageJPEGRepresentation(image, 0.8)
+                let imageFile = PFFile(data: imageData)
+                imageFile.save()
+                
+                let post = PFObject(className: "Post")
+                post["image"] = imageFile
+                post.save()
+                println("sucess")
+                // don't do anything, yet...
+            })
+    
     }
-
 
 
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {

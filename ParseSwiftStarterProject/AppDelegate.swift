@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
     // Set up the Parse SDK
-    Parse.setApplicationId("U1fn3pXGMUA8SvOqKgrpTXTKcW7jAbl8eGKpIOQc", clientKey: "EDx3EhQRmXFuoxyzXoL6bV7utRy0xKAYyHZpo2Zm")
+    Parse.setApplicationId("wQSrfsjq6MPjh1u6Nq721h5Amohz2MTq9Ke10GHW",
+        clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
+    
     
     PFUser.logInWithUsername("test", password: "test")
     
