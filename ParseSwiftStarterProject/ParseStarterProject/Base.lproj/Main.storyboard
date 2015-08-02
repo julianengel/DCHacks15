@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Upload View Controller-->
+        <!--Photo View Controller-->
         <scene sceneID="uQ2-K0-kON">
             <objects>
-                <viewController id="Dcn-Nv-M4d" customClass="UploadViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dcn-Nv-M4d" customClass="PhotoViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xmW-MR-EsX"/>
                         <viewControllerLayoutGuide type="bottom" id="DYE-Ve-L3k"/>

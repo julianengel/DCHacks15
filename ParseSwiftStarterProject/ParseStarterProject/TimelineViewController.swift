@@ -14,32 +14,19 @@ import UIKit
 
 class TimelineViewController: UIViewController {
 
-    var photoTakingHelper: UploadViewController?
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    self.tabBarController?.delegate = self
-  }
+    var photoTakingHelper: PhotoTaker?
     
-    @IBAction func unwindToSegue(segue: UIStoryboardSegue) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        self.tabBarController?.delegate = self
     }
-
+    
 }
 
 // MARK: Tab Bar Delegate
 
 extension TimelineViewController: UITabBarControllerDelegate {
-
-    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
-        if (viewController is UploadViewController) {
-            takePhoto()
-            return false
-        } else {
-            return true
-        }
-    }
     
     func takePhoto() {
         // instantiate photo taking class, provide callback for when photo  is selected
@@ -49,6 +36,15 @@ extension TimelineViewController: UITabBarControllerDelegate {
     }
 
 
-}
+
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        if (viewController is PhotoViewController) {
+            takePhoto()
+            return false
+        } else {
+            return true
+        }
+    }
+    
         
-       
+}

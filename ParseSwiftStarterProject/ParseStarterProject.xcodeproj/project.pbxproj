@@ -26,7 +26,7 @@
 		B8FB6CD51B6D822400816D8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FB6CD41B6D822400816D8F /* CoreLocation.framework */; };
 		B8FB6D011B6D918000816D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB6D001B6D918000816D8F /* AppDelegate.swift */; };
 		B8FB6D071B6DAB4C00816D8F /* PhotoTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB6D061B6DAB4C00816D8F /* PhotoTaker.swift */; };
-		B8FB6D0B1B6DB6CA00816D8F /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB6D0A1B6DB6CA00816D8F /* UploadViewController.swift */; };
+		B8FB6D0F1B6DBC3700816D8F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB6D0E1B6DBC3700816D8F /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +52,7 @@
 		B8FB6CD41B6D822400816D8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B8FB6D001B6D918000816D8F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		B8FB6D061B6DAB4C00816D8F /* PhotoTaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTaker.swift; sourceTree = "<group>"; };
-		B8FB6D0A1B6DB6CA00816D8F /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		B8FB6D0E1B6DBC3700816D8F /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		BCFCD71E90F04FB6B977DD76 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E3ECC1D4FF53653FFCEAAE53 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,8 +112,8 @@
 				81BA814E1A49DA1800E65899 /* Main.storyboard */,
 				B8FB6D001B6D918000816D8F /* AppDelegate.swift */,
 				B8FB6D061B6DAB4C00816D8F /* PhotoTaker.swift */,
-				B8FB6D0A1B6DB6CA00816D8F /* UploadViewController.swift */,
 				0782C58D1B6D8D0800A22A2C /* TimelineViewController.swift */,
+				B8FB6D0E1B6DBC3700816D8F /* PhotoViewController.swift */,
 				0782C5911B6D8D2400A22A2C /* ProfilePostsViewController.swift */,
 				0782C5931B6D8D2D00A22A2C /* ProfileCommentsViewController.swift */,
 				0782C5951B6D8D3500A22A2C /* CategoriesViewController.swift */,
@@ -294,10 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0782C5921B6D8D2400A22A2C /* ProfilePostsViewController.swift in Sources */,
-				B8FB6D0B1B6DB6CA00816D8F /* UploadViewController.swift in Sources */,
 				0782C5941B6D8D2D00A22A2C /* ProfileCommentsViewController.swift in Sources */,
 				0782C5961B6D8D3500A22A2C /* CategoriesViewController.swift in Sources */,
 				B8FB6D011B6D918000816D8F /* AppDelegate.swift in Sources */,
+				B8FB6D0F1B6DBC3700816D8F /* PhotoViewController.swift in Sources */,
 				0782C58E1B6D8D0800A22A2C /* TimelineViewController.swift in Sources */,
 				B8FB6D071B6DAB4C00816D8F /* PhotoTaker.swift in Sources */,
 			);

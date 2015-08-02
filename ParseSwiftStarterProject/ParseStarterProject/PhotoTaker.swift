@@ -8,16 +8,15 @@
 
 import UIKit
 
-typealias PhotoHelperCallback = UIImage? -> Void
-
+typealias PhotoTakerCallback = UIImage? -> Void
 class PhotoTaker : NSObject {
     
     /** View controller on which AlertViewController and UIImagePickerController are presented */
     weak var viewController: UIViewController!
-    var callback: UploadViewController
+    var callback: PhotoTakerCallback
     var imagePickerController: UIImagePickerController?
     
-    init(viewController: UIViewController, callback: UploadViewController) {
+    init(viewController: UIViewController, callback: PhotoTakerCallback) {
         self.viewController = viewController
         self.callback = callback
         
@@ -50,7 +49,7 @@ class PhotoTaker : NSObject {
         alertController.addAction(photoLibraryAction)
         
         viewController.presentViewController(alertController, animated: true, completion: nil)
-        
     }
     
+        
 }
