@@ -42,7 +42,6 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .ScaleAspectFit
             imageView.image = pickedImage
-            imageView.frame.origin.y = 00
         }
     
         dismissViewControllerAnimated(true, completion: nil)
