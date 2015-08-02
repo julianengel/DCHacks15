@@ -15,6 +15,8 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var downvoteButton: UIButton!
     @IBOutlet weak var flagButton: UIButton!
     @IBOutlet weak var commentsButton: UIButton!
+    @IBOutlet weak var tableViewCellImage: UIImageView!
+    @IBOutlet weak var captionLabel: UILabel!
     
     var post: Post!
     
@@ -36,7 +38,11 @@ class TimelineTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        tableViewCellImage = UIImageView(image: post.image)
+        if let caption = post["caption"] as? String {
+            captionLabel.text = caption
+        }
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

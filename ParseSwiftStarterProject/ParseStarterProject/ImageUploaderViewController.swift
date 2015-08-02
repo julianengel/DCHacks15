@@ -11,10 +11,10 @@ import Parse
 class ImageUploaderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
     {
     
-    @IBOutlet weak var captitionF: UITextField!
-    @IBOutlet weak var categoryField: UITextField!
-
+    @IBOutlet weak var captionTextField: UITextField!
+    @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet var imageView: UIImageView!
+    
     let imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
@@ -49,8 +49,8 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
     @IBAction func submitPressed()
     {
         let image = imageView.image
-        let captition = captitionF.text
-        let category = categoryField.text
+        let caption = captionTextField.text
+        let category = categoryTextField.text
         let user = PFUser.currentUser()
         
         
@@ -58,13 +58,14 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         
         let imageData = UIImagePNGRepresentation(image)
         let imageFile = PFFile(name:"image.png", data:imageData)
+        imageFile.saveInBackgroundWithBlock(nil)
         
-        post["captition"] = captition
+        post["caption"] = caption
         post["imageFile"] = imageFile
         post["category"] = category
         post["user"] = user
         post.saveInBackgroundWithBlock(nil)
-        println("sucess")
+        println("success")
         
         clean()
         tabBarController?.selectedIndex = 0
@@ -79,8 +80,8 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
     
     func clean()
     {
-        captitionF.text = ""
-        categoryField.text = ""
+        captionTextField.text = ""
+        categoryTextField.text = ""
         imageView.image = nil
         
     }

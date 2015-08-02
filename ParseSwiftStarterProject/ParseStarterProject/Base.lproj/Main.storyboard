@@ -110,7 +110,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Camera" id="DNW-zJ-zqm"/>
                     <connections>
-                        <outlet property="captitionF" destination="iqg-OW-wtq" id="WxP-ym-eqf"/>
+                        <outlet property="captionTextField" destination="iqg-OW-wtq" id="Kv5-Uv-pPb"/>
+                        <outlet property="categoryTextField" destination="S3z-bO-gVZ" id="OV2-ro-tXY"/>
                         <outlet property="imageView" destination="6yJ-5r-usA" id="cYx-GW-QGy"/>
                     </connections>
                 </viewController>
@@ -607,9 +608,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="captionLabel" destination="l90-r1-sjs" id="dCw-im-Vpp"/>
                                             <outlet property="commentsButton" destination="26p-Vm-fEv" id="gdQ-BI-Kqp"/>
                                             <outlet property="downvoteButton" destination="uad-tR-Aq2" id="XOa-g8-vYm"/>
                                             <outlet property="flagButton" destination="6Q5-qT-9o4" id="S6u-IS-vk1"/>
+                                            <outlet property="imageView" destination="xzh-R7-bTp" id="I9d-s0-wua"/>
+                                            <outlet property="tableViewCellImage" destination="xzh-R7-bTp" id="4ZJ-g4-TTM"/>
                                             <outlet property="upvoteButton" destination="uaC-js-AkI" id="Hi5-Oh-Plz"/>
                                             <outlet property="voteCountLabel" destination="Qbd-3W-AWZ" id="rXy-35-Pmy"/>
                                         </connections>

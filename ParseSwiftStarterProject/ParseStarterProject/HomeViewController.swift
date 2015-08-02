@@ -22,7 +22,7 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
-        let cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as! TimelineTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as! TimelineTableViewCell
         
         cell.post = posts[indexPath.row]
         
@@ -41,6 +41,12 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         hotPosts.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
             // 8
             self.posts = result as? [Post] ?? []
+            
+            for post in self.posts {
+                let data = post.imageFile?.getData()
+                post.image = UIImage(data: data!, scale: 1.0)
+            }
+            
             // 9
             self.tableView.reloadData()
         }

@@ -16,6 +16,7 @@ class Post : PFObject, PFSubclassing {
     @NSManaged var imageFile: PFFile?
     @NSManaged var user: PFUser?
     
+    var image: UIImage!
     
     //MARK: PFSubclassing Protocol
     
