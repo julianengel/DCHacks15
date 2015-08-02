@@ -14,7 +14,7 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var tableView : UITableView!
     let postsQuery = PFQuery(className: "Post")
-    var posts = [Post]()
+    var posts: [Post] = []
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -33,12 +33,11 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func viewWillAppear(animated: Bool) {
     super.viewDidAppear(true)
         
-        let hotPosts = PFQuery(className: "Post")
-        hotPosts.whereKey("status", equalTo: "hot")
-        hotPosts.orderByAscending("createdAt")
+        let postsQuery = PFQuery(className: "Post")
+        postsQuery.orderByAscending("createdAt")
         
         // 7
-        hotPosts.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
+        postsQuery.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
             // 8
             self.posts = result as? [Post] ?? []
             
