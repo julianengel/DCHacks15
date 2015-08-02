@@ -12,6 +12,7 @@ import Parse
 
 class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var hiddenButton: UIButton!
     @IBOutlet weak var tableView : UITableView!
     var posts: [Post] = []
 
@@ -67,7 +68,12 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var timer = NSTimer()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("FUNCTION"), userInfo: nil, repeats: true)
+        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
+    
+    
     
 }
