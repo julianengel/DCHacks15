@@ -11,4 +11,13 @@ import UIKit
 
 class UploadViewController: UIViewController {
 
+<<<<<<< Updated upstream
 }
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+  }
+>>>>>>> Stashed changes

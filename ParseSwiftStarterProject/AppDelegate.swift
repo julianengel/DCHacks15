@@ -23,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Set up the Parse SDK
     Parse.setApplicationId("U1fn3pXGMUA8SvOqKgrpTXTKcW7jAbl8eGKpIOQc", clientKey: "EDx3EhQRmXFuoxyzXoL6bV7utRy0xKAYyHZpo2Zm")
     
+    PFUser.logInWithUsername("test", password: "test")
+    
+    if let user = PFUser.currentUser() {
+        println("Log in successful")
+    } else {
+        println("No logged in user :(")
+    }
+    
   return true
     }
 
