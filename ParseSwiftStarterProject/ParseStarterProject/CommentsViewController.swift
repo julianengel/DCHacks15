@@ -12,9 +12,27 @@ import Parse
 class CommentsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var commentTextField: UITextField!
     
     var post: Post!
     var comments: [Comment] = []
+    
+    @IBAction func postButtonTapped(sender: AnyObject) {
+        let text = commentTextField.text
+        let toPost = self.post
+        let voteCount = 0
+        
+        var comment = PFObject(className: "Comment")
+        
+        comment["text"] = text
+        comment["toPost"] = toPost
+        comment["voteCount"] = voteCount
+        comment.saveInBackgroundWithBlock(nil)
+        
+        commentTextField.text = ""
+        
+        tableView.reloadData()
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -67,7 +85,7 @@ extension CommentsViewController: UITableViewDataSource {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("CommentCell") as! CommentTableViewCell
         
         cell.comment = comments[indexPath.row]
-        cell.commentLabel.text = cell.comment?.text as! String
+        cell.commentLabel.text = cell.comment?.text as? String
         
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         

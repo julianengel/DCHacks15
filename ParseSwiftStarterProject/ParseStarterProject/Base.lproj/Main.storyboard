@@ -473,10 +473,10 @@
             </objects>
             <point key="canvasLocation" x="1462" y="265"/>
         </scene>
-        <!--Comments Table View Controller-->
+        <!--Comments View Controller-->
         <scene sceneID="SvI-L6-dJ5">
             <objects>
-                <viewController id="Dok-T1-ECA" customClass="CommentsTableViewController" customModule="Fire_Feed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dok-T1-ECA" customClass="CommentsViewController" customModule="Fire_Feed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4ZQ-DI-bUQ"/>
                         <viewControllerLayoutGuide type="bottom" id="zPV-Kp-MJd"/>
@@ -507,12 +507,12 @@
                                 </variation>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HcD-le-LZL">
-                                <rect key="frame" x="16" y="556" width="508" height="36"/>
+                                <rect key="frame" x="16" y="507" width="508" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-vq-qcY">
-                                <rect key="frame" x="524" y="556" width="60" height="36"/>
+                                <rect key="frame" x="524" y="507" width="60" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.1647058824" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Bya-Hz-1DT"/>
@@ -538,12 +538,11 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="dismissKeyboard:" destination="Dcn-Nv-M4d" eventType="touchUpInside" id="wkz-fG-q5J"/>
-                                    <action selector="submitPressed" destination="Dcn-Nv-M4d" eventType="touchUpInside" id="got-GO-xbc"/>
+                                    <action selector="postButtonTapped:" destination="Dok-T1-ECA" eventType="touchUpInside" id="SIu-yp-Ygb"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="duS-PS-QVf">
-                                <rect key="frame" x="0.0" y="80" width="600" height="476"/>
+                                <rect key="frame" x="0.0" y="80" width="600" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="100" id="DIX-fI-U5f" customClass="CommentTableViewCell" customModule="Fire_Feed" customModuleProvider="target">
@@ -573,7 +572,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td1-qc-BZF">
-                                                    <rect key="frame" x="550" y="59.5" width="32" height="32"/>
+                                                    <rect key="frame" x="550" y="59" width="32" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="9SW-kZ-Q1Y"/>
                                                         <constraint firstAttribute="width" constant="32" id="Y4k-iM-kWH"/>
@@ -587,7 +586,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gis-tN-tHb">
-                                                    <rect key="frame" x="560.5" y="40" width="11.5" height="19.5"/>
+                                                    <rect key="frame" x="560" y="40" width="11.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -648,6 +647,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="commentTextField" destination="HcD-le-LZL" id="oxS-MQ-vUz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twE-N7-FEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="41c-9k-X6R" userLabel="Exit" sceneMemberID="exit"/>
