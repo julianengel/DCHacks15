@@ -23,7 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Parse.setApplicationId("wQSrfsjq6MPjh1u6Nq721h5Amohz2MTq9Ke10GHW",
         clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
     
-//    
+    
+    
+        // Show the signup or login screen
+    
+    
+    
+    
+    
+   //
 //    PFUser.logInWithUsername("Jeek", password: "Testowania")
 //    if let user = PFUser.currentUser() {
 //        println("Log in successful")
