@@ -28,37 +28,62 @@ class Register: UIViewController {
         
         
         
-        var myQuery = PFObject(className: "User")
+        var myQuery = PFUser()
         myQuery["username"] = username
         myQuery["password"] = password
         
-        myQuery.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
-            if (success) {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UIViewController
-                self.presentViewController(vc, animated: true, completion: nil)
-                // The object has been saved.
-            } else {
-                
-                // There was a problem, check error.description
-                let alertController = UIAlertController(title: "Oops...", message:
-                    "This page went missing. Try again later.", preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-                
-                self.presentViewController(alertController, animated: true, completion: nil)
+        
+        
+        myQuery.signUpInBackgroundWithBlock{(success: Bool, error: NSError?) -> Void in if (success) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UIViewController
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+            // The object has been saved.
+        } else {
+            
+            // There was a problem, check error.description
+            let alertController = UIAlertController(title: "Oops...", message:
+                "This page went missing. Try again later.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
             }
             
         }
         
+        
+        
+        
+//        myQuery.saveInBackgroundWithBlock {
+//            (success: Bool, error: NSError?) -> Void in
+//            if (success) {
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UIViewController
+//                self.presentViewController(vc, animated: true, completion: nil)
+//                
+//                // The object has been saved.
+//            } else {
+//                
+//                // There was a problem, check error.description
+//                let alertController = UIAlertController(title: "Oops...", message:
+//                    "This page went missing. Try again later.", preferredStyle: UIAlertControllerStyle.Alert)
+//                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+//                
+//                self.presentViewController(alertController, animated: true, completion: nil)
+//            }
+//            
+//        }
+//        
     }
     
    @IBAction func login()
     {
         
-        if count(username) != 0 && count(password) != 0{
+        if count(username) > 0{
             
             PFUser.logInWithUsernameInBackground(username, password: password, block: nil)
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UIViewController
             self.presentViewController(vc, animated: true, completion: nil)

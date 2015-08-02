@@ -24,13 +24,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
     
     
-    PFUser.logInWithUsername("test", password: "test")
-    
     
     if let user = PFUser.currentUser() {
         println("Log in successful")
+        
+        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewControlleripad : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("register") as! UIViewController
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = initialViewControlleripad
+        self.window?.makeKeyAndVisible()
+
     } else {
-        println("No logged in user :(")
+       
+        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewControlleripad : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("register") as! UIViewController
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = initialViewControlleripad
+        self.window?.makeKeyAndVisible()
+
+        
     }
     
   return true
