@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		0753A26A1B6E3358000114BD /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		1C5CA4462EB3446C71B1F22A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81BA81451A49DA1800E65899 /* ParseStarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseStarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BA81451A49DA1800E65899 /* Fire Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fire Feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BA81491A49DA1800E65899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81BA814F1A49DA1800E65899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81BA81511A49DA1800E65899 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		81BA81461A49DA1800E65899 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81BA81451A49DA1800E65899 /* ParseStarterProject.app */,
+				81BA81451A49DA1800E65899 /* Fire Feed.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81BA81441A49DA1800E65899 /* ParseStarterProject */ = {
+		81BA81441A49DA1800E65899 /* Fire Feed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "ParseStarterProject" */;
+			buildConfigurationList = 81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "Fire Feed" */;
 			buildPhases = (
 				C15764655AFE20FE5A8E556A /* Check Pods Manifest.lock */,
 				81BA81411A49DA1800E65899 /* Sources */,
@@ -212,9 +212,9 @@
 			);
 			dependencies = (
 			);
-			name = ParseStarterProject;
+			name = "Fire Feed";
 			productName = ParseStarterProject;
-			productReference = 81BA81451A49DA1800E65899 /* ParseStarterProject.app */;
+			productReference = 81BA81451A49DA1800E65899 /* Fire Feed.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "ParseStarterProject" */;
+			buildConfigurationList = 81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "Fire Feed" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -244,7 +244,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81BA81441A49DA1800E65899 /* ParseStarterProject */,
+				81BA81441A49DA1800E65899 /* Fire Feed */,
 			);
 		};
 /* End PBXProject section */
@@ -453,7 +453,7 @@
 				INFOPLIST_FILE = ParseStarterProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fire Feed";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseStarterProject-Bridging-Header.h";
 			};
 			name = Debug;
@@ -471,7 +471,7 @@
 				INFOPLIST_FILE = ParseStarterProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fire Feed";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseStarterProject-Bridging-Header.h";
 			};
 			name = Release;
@@ -479,7 +479,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "ParseStarterProject" */ = {
+		81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "Fire Feed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81BA81621A49DA1800E65899 /* Debug */,
@@ -488,7 +488,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "ParseStarterProject" */ = {
+		81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "Fire Feed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81BA81651A49DA1800E65899 /* Debug */,

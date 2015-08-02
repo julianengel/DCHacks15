@@ -9,7 +9,7 @@
         <!--Image Uploader View Controller-->
         <scene sceneID="uQ2-K0-kON">
             <objects>
-                <viewController id="Dcn-Nv-M4d" customClass="ImageUploaderViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dcn-Nv-M4d" customClass="ImageUploaderViewController" customModule="Fire_Feed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xmW-MR-EsX"/>
                         <viewControllerLayoutGuide type="bottom" id="DYE-Ve-L3k"/>
@@ -122,7 +122,7 @@
         <!--Profile Posts View Controller-->
         <scene sceneID="rBe-Th-H4U">
             <objects>
-                <viewController id="mYZ-y6-Krh" customClass="ProfilePostsViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mYZ-y6-Krh" customClass="ProfilePostsViewController" customModule="Fire_Feed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HbZ-Se-QwE"/>
                         <viewControllerLayoutGuide type="bottom" id="g7J-ND-Enr"/>
@@ -170,7 +170,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="440" id="GqB-Dl-VOH" customClass="TimelineTableViewCell" customModule="ParseStarterProject" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="440" id="GqB-Dl-VOH" customClass="TimelineTableViewCell" customModule="Fire_Feed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GqB-Dl-VOH" id="Rvz-Tt-8I9">
@@ -450,7 +450,7 @@
         <!--Home View Controller-->
         <scene sceneID="OzD-Y1-4vp">
             <objects>
-                <viewController id="fe5-IF-I7D" customClass="HomeViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fe5-IF-I7D" customClass="HomeViewController" customModule="Fire_Feed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0FY-FF-KX5"/>
                         <viewControllerLayoutGuide type="bottom" id="D72-8t-4jJ"/>
@@ -498,7 +498,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" id="Ot1-Kj-J0b" customClass="TimelineTableViewCell" customModule="ParseStarterProject" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" id="Ot1-Kj-J0b" customClass="TimelineTableViewCell" customModule="Fire_Feed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ot1-Kj-J0b" id="iMe-LE-eGR">
@@ -654,7 +654,7 @@
         <!--Categories View Controller-->
         <scene sceneID="UsI-oW-8e0">
             <objects>
-                <viewController id="nFE-fe-LZg" customClass="CategoriesViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nFE-fe-LZg" customClass="CategoriesViewController" customModule="Fire_Feed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3lV-WU-DOu"/>
                         <viewControllerLayoutGuide type="bottom" id="SPu-Ae-B8h"/>
