@@ -24,6 +24,10 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         let cell = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as! TimelineTableViewCell
         
         cell.post = posts[indexPath.row]
+        cell.tableViewCellImage.image = cell.post?.image
+        if let caption = cell.post?["caption"] as? String {
+            cell.captionLabel.text = caption
+        }
         
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         
@@ -35,6 +39,7 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         super.viewDidAppear(animated)
         
         let postsQuery = PFQuery(className: "Post")
+        postsQuery.whereKey("user", equalTo: PFUser.currentUser()!)
         
         postsQuery.orderByDescending("createdAt")
         

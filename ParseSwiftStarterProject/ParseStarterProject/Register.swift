@@ -48,7 +48,7 @@ class Register: UIViewController {
         
         if count(username) != 0 && count(password) != 0{
             
-             PFUser.logInWithUsernameInBackground(username, password: password)
+            PFUser.logInWithUsernameInBackground(username, password: password, block: nil)
             
         }
         

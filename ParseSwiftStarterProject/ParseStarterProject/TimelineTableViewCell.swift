@@ -39,19 +39,7 @@ class TimelineTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        tableViewCellImage = UIImageView(image: post?.image)
-        if let caption = post?["caption"] as? String {
-            captionLabel.text = caption
-        }
     }
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        
-//        tableViewCellImage = UIImageView(image: post.image)
-//        if let caption = post["caption"] as? String {
-//            captionLabel.text = caption
-//        }
-//    }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

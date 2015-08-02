@@ -8,7 +8,6 @@
 
 import UIKit
 import Parse
-import FBSDKCoreKit
 import ParseUI
 
 @UIApplicationMain
@@ -58,13 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   //MARK: Facebook Integration
   
   func applicationDidBecomeActive(application: UIApplication) {
-    FBSDKAppEvents.activateApp()
   }
-  
-  func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-    return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
-  }
-
 
 }
 
