@@ -26,6 +26,11 @@
 		B84186591B6DF7A300551F9D /* ProfileCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186521B6DF7A300551F9D /* ProfileCommentsViewController.swift */; };
 		B841865A1B6DF7A300551F9D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186531B6DF7A300551F9D /* CategoriesViewController.swift */; };
 		B841865C1B6DF81900551F9D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841865B1B6DF81900551F9D /* HomeViewController.swift */; };
+		B841865F1B6E00F900551F9D /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841865E1B6E00F900551F9D /* Downloader.swift */; };
+		B84186631B6E013100551F9D /* CommentingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186601B6E013100551F9D /* CommentingViewController.swift */; };
+		B84186641B6E013100551F9D /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186611B6E013100551F9D /* CommentsTableViewController.swift */; };
+		B84186651B6E013100551F9D /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186621B6E013100551F9D /* ComposeViewController.swift */; };
+		B84186681B6E044600551F9D /* ImageUploaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84186671B6E044600551F9D /* ImageUploaderViewController.swift */; };
 		B8FB6CD51B6D822400816D8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FB6CD41B6D822400816D8F /* CoreLocation.framework */; };
 		B8FB6D011B6D918000816D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB6D001B6D918000816D8F /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +58,11 @@
 		B84186521B6DF7A300551F9D /* ProfileCommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileCommentsViewController.swift; path = ParseStarterProject/ProfileCommentsViewController.swift; sourceTree = "<group>"; };
 		B84186531B6DF7A300551F9D /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesViewController.swift; path = ParseStarterProject/CategoriesViewController.swift; sourceTree = "<group>"; };
 		B841865B1B6DF81900551F9D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B841865E1B6E00F900551F9D /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		B84186601B6E013100551F9D /* CommentingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentingViewController.swift; sourceTree = "<group>"; };
+		B84186611B6E013100551F9D /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
+		B84186621B6E013100551F9D /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		B84186671B6E044600551F9D /* ImageUploaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploaderViewController.swift; sourceTree = "<group>"; };
 		B8FB6CD41B6D822400816D8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B8FB6D001B6D918000816D8F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		BCFCD71E90F04FB6B977DD76 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,8 +123,13 @@
 			isa = PBXGroup;
 			children = (
 				81BA814E1A49DA1800E65899 /* Main.storyboard */,
+				B84186671B6E044600551F9D /* ImageUploaderViewController.swift */,
 				B841865B1B6DF81900551F9D /* HomeViewController.swift */,
 				B8FB6D001B6D918000816D8F /* AppDelegate.swift */,
+				B841865E1B6E00F900551F9D /* Downloader.swift */,
+				B84186601B6E013100551F9D /* CommentingViewController.swift */,
+				B84186611B6E013100551F9D /* CommentsTableViewController.swift */,
+				B84186621B6E013100551F9D /* ComposeViewController.swift */,
 				81BA81511A49DA1800E65899 /* Images.xcassets */,
 				81BA81481A49DA1800E65899 /* Supporting Files */,
 			);
@@ -304,11 +319,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84186641B6E013100551F9D /* CommentsTableViewController.swift in Sources */,
+				B84186681B6E044600551F9D /* ImageUploaderViewController.swift in Sources */,
 				B84186581B6DF7A300551F9D /* ProfilePostsViewController.swift in Sources */,
 				B84186551B6DF7A300551F9D /* PhotoTaker.swift in Sources */,
+				B84186651B6E013100551F9D /* ComposeViewController.swift in Sources */,
 				B84186591B6DF7A300551F9D /* ProfileCommentsViewController.swift in Sources */,
 				B841865C1B6DF81900551F9D /* HomeViewController.swift in Sources */,
 				B84186571B6DF7A300551F9D /* PhotoViewController.swift in Sources */,
+				B84186631B6E013100551F9D /* CommentingViewController.swift in Sources */,
+				B841865F1B6E00F900551F9D /* Downloader.swift in Sources */,
 				B8FB6D011B6D918000816D8F /* AppDelegate.swift in Sources */,
 				B841865A1B6DF7A300551F9D /* CategoriesViewController.swift in Sources */,
 				B84186561B6DF7A300551F9D /* TimelineViewController.swift in Sources */,

@@ -7,26 +7,43 @@
 //
 
 import UIKit
+import Parse
+
+
+let reuseIdentifier = "Cell"
 
 class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView : UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let postsQuery = PFQuery(className: "Post")
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
-    let reuseIdentifier = "cell"
-    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = "HELLO PARSE"
+       
+          var cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //
-        return 4
+        
+    override func viewWillAppear(animated: Bool) {
+    super.viewDidAppear(true)
+        
+        let postsFromFollowedUsers = PFQuery(className: "Post")
+        postsFromFollowedUsers!.whereKey("user", matchesKey: "toUser", inQuery: followingQuery)
     }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
 }

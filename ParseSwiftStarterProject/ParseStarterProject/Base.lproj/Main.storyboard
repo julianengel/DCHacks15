@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Photo View Controller-->
+        <!--Image Uploader View Controller-->
         <scene sceneID="uQ2-K0-kON">
             <objects>
-                <viewController id="Dcn-Nv-M4d" customClass="PhotoViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dcn-Nv-M4d" customClass="ImageUploaderViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xmW-MR-EsX"/>
                         <viewControllerLayoutGuide type="bottom" id="DYE-Ve-L3k"/>
@@ -48,6 +48,9 @@
                                         <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loadImageButtonTapped:" destination="Dcn-Nv-M4d" eventType="touchUpInside" id="yU7-52-p19"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iqg-OW-wtq">
                                 <rect key="frame" x="140" y="360" width="320" height="30"/>
@@ -79,6 +82,9 @@
                                         <exclude reference="zNM-wa-VZs"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="submitPressed" destination="Dcn-Nv-M4d" eventType="touchUpInside" id="Xx6-gh-fiT"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NXn-ty-hno">
                                 <rect key="frame" x="140" y="360" width="320" height="30"/>
@@ -92,8 +98,8 @@
                             <constraint firstItem="iqg-OW-wtq" firstAttribute="width" secondItem="6yJ-5r-usA" secondAttribute="width" id="1vq-aK-L3M"/>
                             <constraint firstItem="iqg-OW-wtq" firstAttribute="top" secondItem="6yJ-5r-usA" secondAttribute="bottom" constant="20" id="30t-zi-FVc"/>
                             <constraint firstAttribute="centerX" secondItem="NXn-ty-hno" secondAttribute="centerX" id="4QF-ip-5Sn"/>
-                            <constraint firstItem="MvX-BE-iWC" firstAttribute="top" secondItem="NXn-ty-hno" secondAttribute="bottom" constant="251" id="5E3-bi-cXS"/>
                             <constraint firstItem="MvX-BE-iWC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iqg-OW-wtq" secondAttribute="bottom" constant="20" id="5TI-4M-KxT"/>
+                            <constraint firstItem="DYE-Ve-L3k" firstAttribute="top" secondItem="MvX-BE-iWC" secondAttribute="bottom" constant="20" id="7Lw-9P-yal"/>
                             <constraint firstItem="NXn-ty-hno" firstAttribute="top" secondItem="iqg-OW-wtq" secondAttribute="bottom" constant="10" id="BwB-rx-vYb"/>
                             <constraint firstItem="OJY-fA-gJl" firstAttribute="centerY" secondItem="6yJ-5r-usA" secondAttribute="centerY" id="DtF-ie-GXg"/>
                             <constraint firstAttribute="centerX" secondItem="MvX-BE-iWC" secondAttribute="centerX" id="IYO-tP-frT"/>
@@ -108,10 +114,10 @@
                                 <exclude reference="NXn-ty-hno"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5E3-bi-cXS"/>
                                 <exclude reference="4QF-ip-5Sn"/>
                                 <exclude reference="BwB-rx-vYb"/>
                                 <exclude reference="QCM-Mw-rPV"/>
+                                <exclude reference="7Lw-9P-yal"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -119,15 +125,20 @@
                                 <include reference="NXn-ty-hno"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5E3-bi-cXS"/>
-                                <exclude reference="5TI-4M-KxT"/>
                                 <include reference="4QF-ip-5Sn"/>
                                 <include reference="BwB-rx-vYb"/>
                                 <include reference="QCM-Mw-rPV"/>
+                                <exclude reference="5TI-4M-KxT"/>
+                                <include reference="7Lw-9P-yal"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Camera" id="DNW-zJ-zqm"/>
+                    <connections>
+                        <outlet property="captitionF" destination="iqg-OW-wtq" id="WxP-ym-eqf"/>
+                        <outlet property="categoryField" destination="NXn-ty-hno" id="VIY-J5-zDb"/>
+                        <outlet property="imageView" destination="6yJ-5r-usA" id="cYx-GW-QGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAv-Eb-BJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -512,13 +523,13 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ot1-Kj-J0b">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" id="Ot1-Kj-J0b">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ot1-Kj-J0b" id="iMe-LE-eGR">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xzh-R7-bTp">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xzh-R7-bTp">
                                                     <rect key="frame" x="140" y="8" width="320" height="320"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="320" id="NYD-ZA-doS"/>
@@ -533,7 +544,7 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l90-r1-sjs">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l90-r1-sjs">
                                                     <rect key="frame" x="8" y="367.5" width="70.5" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -542,7 +553,7 @@
                                                         <rect key="frame" x="8" y="368" width="71" height="24"/>
                                                     </variation>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Q5-qT-9o4">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Q5-qT-9o4">
                                                     <rect key="frame" x="8" y="400" width="32" height="32"/>
                                                     <state key="normal" image="Flag">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -581,7 +592,7 @@
                                                         <rect key="frame" x="80" y="411" width="89" height="21"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-3W-AWZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-3W-AWZ">
                                                     <rect key="frame" x="571" y="376" width="12" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
