@@ -20,12 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
-    // Set up the Parse SDK
+    // Initialize Parse.
     Parse.setApplicationId("wQSrfsjq6MPjh1u6Nq721h5Amohz2MTq9Ke10GHW",
         clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
     
     
-    PFUser.logInWithUsername("test", password: "test")
+    PFUser.logInWithUsername("test", password: "tesdt")
+    
     
     if let user = PFUser.currentUser() {
         println("Log in successful")
