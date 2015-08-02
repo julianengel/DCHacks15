@@ -14,6 +14,8 @@ import UIKit
 
 class TimelineViewController: UIViewController {
 
+    var photoTakingHelper: UploadViewController?
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -30,13 +32,23 @@ class TimelineViewController: UIViewController {
 
 extension TimelineViewController: UITabBarControllerDelegate {
 
-  func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
-    if (viewController is UploadViewController) {
-      println("Take Photo")
-      return false
-    } else {
-      return true
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        if (viewController is UploadViewController) {
+            takePhoto()
+            return false
+        } else {
+            return true
+        }
     }
-  }
+    
+    func takePhoto() {
+        // instantiate photo taking class, provide callback for when photo  is selected
+        photoTakingHelper = PhotoTaker(viewController: self.tabBarController!) { (image: UIImage?) in
+            // don't do anything, yet...
+        }
+    }
+
 
 }
+        
+       

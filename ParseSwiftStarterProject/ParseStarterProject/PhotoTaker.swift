@@ -14,10 +14,10 @@ class PhotoTaker : NSObject {
     
     /** View controller on which AlertViewController and UIImagePickerController are presented */
     weak var viewController: UIViewController!
-    var callback: PhotoTakingHelperCallback
+    var callback: UploadViewController
     var imagePickerController: UIImagePickerController?
     
-    init(viewController: UIViewController, callback: PhotoTakingHelperCallback) {
+    init(viewController: UIViewController, callback: UploadViewController) {
         self.viewController = viewController
         self.callback = callback
         
