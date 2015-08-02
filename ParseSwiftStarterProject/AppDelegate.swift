@@ -23,6 +23,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Parse.setApplicationId("wQSrfsjq6MPjh1u6Nq721h5Amohz2MTq9Ke10GHW",
         clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
     
+    var user = PFUser()
+    user.username = "test"
+    user.password = "test"
+    user.email = "email@example.com"
+    // other fields can be set just like with PFObject
+    user["phone"] = "415-392-0202"
+    
+    user.signUpInBackgroundWithBlock {
+        (succeeded: Bool, error: NSError?) -> Void in
+        if let error = error {
+            let errorString = error.userInfo?["error"] as? NSString
+            // Show the errorString somewhere and let the user try again.
+            println("\n \(error) \n")
+        } else {
+            // Hooray! Let them use the app now.
+        }
+    }
 //    
 //    PFUser.logInWithUsername("Jeek", password: "Testowania")
 //    if let user = PFUser.currentUser() {
