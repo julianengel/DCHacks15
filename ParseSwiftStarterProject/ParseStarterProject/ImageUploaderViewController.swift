@@ -11,11 +11,10 @@ import Parse
 class ImageUploaderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
     {
     
-    @IBOutlet weak var uploadBtn: UIButton!
-    @IBOutlet weak var captionTextField: UITextField!
-    @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var captitionF: UITextField!
+    @IBOutlet weak var categoryField: UITextField!
+
     @IBOutlet var imageView: UIImageView!
-    
     let imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
@@ -41,23 +40,17 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .ScaleAspectFit
             imageView.image = pickedImage
-            
-            uploadBtn.hidden = true
         }
     
         dismissViewControllerAnimated(true, completion: nil)
         
     }
     
-   @IBAction func dismissKeyboard(sender: AnyObject){
-        
-        self.resignFirstResponder()
-    }
     @IBAction func submitPressed()
     {
         let image = imageView.image
-        let caption = captionTextField.text
-        let category = categoryTextField.text
+        let captition = captitionF.text
+        let category = categoryField.text
         let user = PFUser.currentUser()
         
         
@@ -65,20 +58,18 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         
         let imageData = UIImagePNGRepresentation(image)
         let imageFile = PFFile(name:"image.png", data:imageData)
-        imageFile.saveInBackgroundWithBlock(nil)
         
-        post["caption"] = caption
+        post["captition"] = captition
         post["imageFile"] = imageFile
         post["category"] = category
         post["user"] = user
         post.saveInBackgroundWithBlock(nil)
-        println("success")
+        println("sucess")
         
         clean()
-        
-        uploadBtn.hidden = false
-        
         tabBarController?.selectedIndex = 0
+        
+        
         
     }
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -88,12 +79,19 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
     
     func clean()
     {
-        captionTextField.text = ""
-        categoryTextField.text = ""
+        captitionF.text = ""
+        categoryField.text = ""
         imageView.image = nil
         
     }
-    
+    /*
     // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81BA81441A49DA1800E65899"
-               BuildableName = "Fire Feed.app"
-               BlueprintName = "Fire Feed"
-               ReferencedContainer = "container:Fire Feed.xcodeproj">
+               BuildableName = "ParseStarterProject.app"
+               BlueprintName = "ParseStarterProject"
+               ReferencedContainer = "container:ParseStarterProject.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81BA81441A49DA1800E65899"
-            BuildableName = "Fire Feed.app"
-            BlueprintName = "Fire Feed"
-            ReferencedContainer = "container:Fire Feed.xcodeproj">
+            BuildableName = "ParseStarterProject.app"
+            BlueprintName = "ParseStarterProject"
+            ReferencedContainer = "container:ParseStarterProject.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -48,14 +48,13 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81BA81441A49DA1800E65899"
-            BuildableName = "Fire Feed.app"
-            BlueprintName = "Fire Feed"
-            ReferencedContainer = "container:Fire Feed.xcodeproj">
+            BuildableName = "ParseStarterProject.app"
+            BlueprintName = "ParseStarterProject"
+            ReferencedContainer = "container:ParseStarterProject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -67,14 +66,13 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81BA81441A49DA1800E65899"
-            BuildableName = "Fire Feed.app"
-            BlueprintName = "Fire Feed"
-            ReferencedContainer = "container:Fire Feed.xcodeproj">
+            BuildableName = "ParseStarterProject.app"
+            BlueprintName = "ParseStarterProject"
+            ReferencedContainer = "container:ParseStarterProject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

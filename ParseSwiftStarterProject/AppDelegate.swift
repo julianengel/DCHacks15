@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import FBSDKCoreKit
 import ParseUI
 
 @UIApplicationMain
@@ -19,21 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
-    
-    
-    
-    
     // Initialize Parse.
-    Parse.setApplicationId("oJwUUJdU4C0y67xkJXUDG63V24HNgb99lTzL1I23",
-        clientKey: "hIhqm4ACugegk2xLlqRPFFlgo2xjPzvJTFa8caX8")
+    Parse.setApplicationId("wQSrfsjq6MPjh1u6Nq721h5Amohz2MTq9Ke10GHW",
+        clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
     
-    PFUser.logInWithUsername("test", password: "test")
+    
+    PFUser.logInWithUsername("test", password: "tesdt")
+    
     
     if let user = PFUser.currentUser() {
         println("Log in successful")
     } else {
         println("No logged in user :(")
     }
+    
   return true
     }
 
@@ -58,7 +58,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   //MARK: Facebook Integration
   
   func applicationDidBecomeActive(application: UIApplication) {
+    FBSDKAppEvents.activateApp()
   }
+  
+  func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+    return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+  }
+
 
 }
 
