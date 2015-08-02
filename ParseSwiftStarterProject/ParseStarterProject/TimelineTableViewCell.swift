@@ -18,7 +18,7 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var tableViewCellImage: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
     
-    var post: Post!
+    var post: Post?
     
     @IBAction func upvoteButtonTapped(sender: AnyObject) {
         
@@ -39,8 +39,8 @@ class TimelineTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        tableViewCellImage = UIImageView(image: post.image)
-        if let caption = post["caption"] as? String {
+        tableViewCellImage = UIImageView(image: post?.image)
+        if let caption = post?["caption"] as? String {
             captionLabel.text = caption
         }
     }

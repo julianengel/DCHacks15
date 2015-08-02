@@ -13,7 +13,6 @@ import Parse
 class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView : UITableView!
-    let postsQuery = PFQuery(className: "Post")
     var posts: [Post] = []
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,15 +25,18 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         
         cell.post = posts[indexPath.row]
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        
         return cell
     }
     
         
-    override func viewWillAppear(animated: Bool) {
-    super.viewDidAppear(true)
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         let postsQuery = PFQuery(className: "Post")
-        postsQuery.orderByAscending("createdAt")
+        
+        postsQuery.orderByDescending("createdAt")
         
         // 7
         postsQuery.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
