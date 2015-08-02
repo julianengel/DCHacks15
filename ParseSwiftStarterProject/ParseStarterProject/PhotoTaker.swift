@@ -42,7 +42,7 @@ class PhotoTaker : NSObject {
             alertController.addAction(cameraAction)
         }
         let photoLibraryAction = UIAlertAction(title: "Photo from Library", style: .Default) { (action) in
-            // do nothing yet...
+            self.showImagePickerController(.PhotoLibrary)
         }
         
         alertController.addAction(photoLibraryAction)
