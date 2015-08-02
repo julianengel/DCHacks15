@@ -8,17 +8,25 @@
 
 import UIKit
 import Parse
+
 class Register: UIViewController {
     
     @IBOutlet weak var EmailField : UITextField!
     @IBOutlet weak var PasswordField : UITextField!
+    var username = ""
+    var password = ""
+  
+    
+    override func viewDidLoad() {
+        username = EmailField.text
+        PasswordField.secureTextEntry = true
+         password = PasswordField.text
+    }
 
     
     func register(){
         
-        let username = EmailField.text
-        PasswordField.secureTextEntry = true
-        let password = PasswordField.text
+        
         
         var myQuery = PFObject(className: "User")
         myQuery["username"] = username
@@ -34,6 +42,22 @@ class Register: UIViewController {
         }
         
     }
-
+    
+    func login()
+    {
+        
+        if count(username) != 0 && count(password) != 0{
+            
+             PFUser.logInWithUsernameInBackground(username, password: password)
+            
+        }
+        
+        
+        
+        
+     
+      
+        
+    }
 
 }
