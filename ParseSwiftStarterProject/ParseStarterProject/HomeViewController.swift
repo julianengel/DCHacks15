@@ -56,7 +56,7 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        PFUser.logInWithUsername("tested", password: "tested")
+//        PFUser.logInWithUsername("tested", password: "tested")
         
         let postsQuery = PFQuery(className: "Post")
         postsQuery.whereKey("user", equalTo: PFUser.currentUser()!)
@@ -82,54 +82,54 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         
         
-        var currentUser = PFUser.currentUser()
-        if currentUser != nil {
-            // Do stuff with the user
-        } else {
-            PFUser.logInWithUsernameInBackground("test", password:"test") {
-                (user: PFUser?, error: NSError?) -> Void in
-                if user != nil {
-                    // Do stuff after successful login.
-                    PFUser.logInWithUsernameInBackground("myname", password:"mypass") {
-                        (user: PFUser?, error: NSError?) -> Void in
-                        if user != nil {
-                            // Do stuff after successful login.
-                        } else {
-                            // The login failed. Check error to see why.
-                        }
-                    }
-                    
-                    
-                } else {
-                    // The login failed. Check error to see why.
-                    var user = PFUser()
-                    user.username = "test"
-                    user.password = "test"
-                    user.email = "email@example.com"
-                    // other fields can be set just like with PFObject
-                    user["phone"] = "415-392-0202"
-                    
-                    
-                    
-                    user.signUpInBackgroundWithBlock {
-                        (succeeded: Bool, error: NSError?) -> Void in
-                        if let error = error {
-                            let errorString = error.userInfo?["error"] as? NSString
-                            // Show the errorString somewhere and let the user try again.
-                            println("\n \(error) \n")
-                        } else {
-                            // Hooray! Let them use the app now.
-                        }
-                    }
-                    
-                }
-            }
-        }
-        
-        
-        
-        
-        
+//        var currentUser = PFUser.currentUser()
+//        if currentUser != nil {
+//            // Do stuff with the user
+//        } else {
+//            PFUser.logInWithUsernameInBackground("abcde", password:"onetwothree") {
+//                (user: PFUser?, error: NSError?) -> Void in
+//                if user != nil {
+//                    // Do stuff after successful login.
+//                    PFUser.logInWithUsernameInBackground("abcde", password:"onetwothree") {
+//                        (user: PFUser?, error: NSError?) -> Void in
+//                        if user != nil {
+//                            // Do stuff after successful login.
+//                        } else {
+//                            // The login failed. Check error to see why.
+//                        }
+//                    }
+//                    
+//                    
+//                } else {
+//                    // The login failed. Check error to see why.
+//                    var user = PFUser()
+//                    user.username = "abcde"
+//                    user.password = "onetwothree"
+//                    user.email = "email@example.com"
+//                    // other fields can be set just like with PFObject
+//                    user["phone"] = "415-392-0202"
+//                    
+//                    
+//                    
+//                    user.signUpInBackgroundWithBlock {
+//                        (succeeded: Bool, error: NSError?) -> Void in
+//                        if let error = error {
+//                            let errorString = error.userInfo?["error"] as? NSString
+//                            // Show the errorString somewhere and let the user try again.
+//                            println("\n \(error) \n")
+//                        } else {
+//                            // Hooray! Let them use the app now.
+//                        }
+//                    }
+//                    
+//                }
+//            }
+//        }
+//        
+//        
+//        
+//        
+//        
         
 //        var timer = NSTimer()
 //        timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("FUNCTION"), userInfo: nil, repeats: true)

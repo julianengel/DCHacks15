@@ -19,43 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
+    
+    
+    
+    
     // Initialize Parse.
-    Parse.setApplicationId("wQSrfsjq6MPjh1u6Nq721h5Amohz2MTq9Ke10GHW",
-        clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
+    Parse.setApplicationId("oJwUUJdU4C0y67xkJXUDG63V24HNgb99lTzL1I23",
+        clientKey: "hIhqm4ACugegk2xLlqRPFFlgo2xjPzvJTFa8caX8")
     
+    PFUser.logInWithUsername("test", password: "test")
     
-    
-        // Show the signup or login screen
-    
-    
-    
-    
-    
-   //
-//    PFUser.logInWithUsername("Jeek", password: "Testowania")
-//    if let user = PFUser.currentUser() {
-//        println("Log in successful")
-//        
-//        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let initialViewControlleripad : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("register") as! UIViewController
-//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        self.window?.rootViewController = initialViewControlleripad
-//        self.window?.makeKeyAndVisible()
-//        
-//        
-//        
-//
-//    } else {
-//       
-//        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let initialViewControlleripad : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("register") as! UIViewController
-//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        self.window?.rootViewController = initialViewControlleripad
-//        self.window?.makeKeyAndVisible()
-//
-//        
-//    }
-//    
+    if let user = PFUser.currentUser() {
+        println("Log in successful")
+    } else {
+        println("No logged in user :(")
+    }
   return true
     }
 
