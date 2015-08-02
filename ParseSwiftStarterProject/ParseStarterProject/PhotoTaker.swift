@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 typealias PhotoTakerCallback = UIImage? -> Void
 class PhotoTaker : NSObject {
@@ -68,9 +69,20 @@ class PhotoTaker : NSObject {
 extension PhotoTaker: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        viewController.dismissViewControllerAnimated(false, completion: nil)
+       
+        let imageData = UIImageJPEGRepresentation(image, 0.8)
+        let imageFile = PFFile(data: imageData)
+        imageFile.save()
+        
+        let post = PFObject(className: "Post")
+        post["image"] = imageFile
+        post.save()
+        println("sucess")
+
         
         callback(image)
+        
+        
         println("all gay at the call back")
     }
     
