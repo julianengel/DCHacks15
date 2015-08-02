@@ -32,11 +32,11 @@ class Post : PFObject, PFSubclassing {
     }
     
     override class func initialize() {
-        var onceToken : dispatch_once_t = 0;
-        dispatch_once(&onceToken) {
-            // inform Parse about this subclass
-            self.registerSubclass()
-        }
+//        var onceToken : dispatch_once_t = 0;
+//        dispatch_once(&onceToken) {
+//            // inform Parse about this subclass
+//            self.registerSubclass()
+//        }
     }
     
 }
