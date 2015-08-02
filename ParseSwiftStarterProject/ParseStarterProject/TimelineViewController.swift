@@ -10,8 +10,9 @@ import UIKit
 import Parse
 import ConvenienceKit
 
-class TimelineViewController: UIViewController, TimelineComponentTarget {
+class TimelineViewController: UIViewController {
     
     var uploader : UploadViewController?
+    
     
   }
