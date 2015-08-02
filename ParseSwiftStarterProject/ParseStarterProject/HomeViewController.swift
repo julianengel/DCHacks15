@@ -38,6 +38,8 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        PFUser.logInWithUsername("tested", password: "tested")
+        
         let postsQuery = PFQuery(className: "Post")
         postsQuery.whereKey("user", equalTo: PFUser.currentUser()!)
         
