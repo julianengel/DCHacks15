@@ -56,10 +56,6 @@ class TimelineTableViewCell: UITableViewCell {
         flagButton.selected = !flagButton.selected
     }
     
-    @IBAction func commentsButtonTapped(sender: AnyObject) {
-        
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

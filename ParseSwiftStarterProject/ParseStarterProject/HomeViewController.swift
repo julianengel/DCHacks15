@@ -9,12 +9,14 @@
 import UIKit
 import Parse
 
-
 class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var hiddenButton: UIButton!
     @IBOutlet weak var tableView : UITableView!
+    
     var posts: [Post] = []
-
+    var selectedIndex: Int!
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
@@ -24,14 +26,30 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         let cell = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as! TimelineTableViewCell
         
         cell.post = posts[indexPath.row]
-        cell.tableViewCellImage.image = cell.post?.image
-        if let caption = cell.post?["caption"] as? String {
+        cell.tableViewCellImage.image = cell.post!.image
+        if let caption = cell.post!["caption"] as? String {
             cell.captionLabel.text = caption
         }
         
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        var comments: [Comment] = []
+        
+        let commentsQuery = PFQuery(className: "Comment")
+        commentsQuery.whereKey("toPost", equalTo: cell.post!)
+        commentsQuery.orderByDescending("createdAt")
+        
+        // 7
+        commentsQuery.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
+            // 8
+            comments = result as? [Comment] ?? []
+            
+            cell.commentsButton.setTitle("\(comments.count) Comments", forState: UIControlState.Normal)
+        }
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedIndex = indexPath.row
     }
     
         
@@ -63,6 +81,9 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var timer = NSTimer()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("FUNCTION"), userInfo: nil, repeats: true)
+        
         self.tableView.registerClass(TimelineTableViewCell.self, forCellReuseIdentifier: "PostCell")
     }
     
@@ -70,4 +91,13 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if identifier == "ShowComments" {
+                let commentsViewController = segue.destinationViewController as! CommentsViewController
+                
+                commentsViewController.post = posts[selectedIndex]
+            }
+        }
+    }
 }
