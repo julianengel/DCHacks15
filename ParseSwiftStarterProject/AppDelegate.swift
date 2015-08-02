@@ -23,31 +23,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Parse.setApplicationId("wQSrfsjq6MPjh1u6Nq721h5Amohz2MTq9Ke10GHW",
         clientKey: "OrO7gARDk1WMS58Nv1GfD3at2lCKOQrTDIdmnXHK")
     
-    
-    PFUser.logInWithUsername("Jeek", password: "Testowania")
-    if let user = PFUser.currentUser() {
-        println("Log in successful")
-        
-        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewControlleripad : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("register") as! UIViewController
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.rootViewController = initialViewControlleripad
-        self.window?.makeKeyAndVisible()
-        
-        
-        
-
-    } else {
-       
-        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewControlleripad : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("register") as! UIViewController
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.rootViewController = initialViewControlleripad
-        self.window?.makeKeyAndVisible()
-
-        
-    }
-    
+//    
+//    PFUser.logInWithUsername("Jeek", password: "Testowania")
+//    if let user = PFUser.currentUser() {
+//        println("Log in successful")
+//        
+//        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let initialViewControlleripad : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("register") as! UIViewController
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        self.window?.rootViewController = initialViewControlleripad
+//        self.window?.makeKeyAndVisible()
+//        
+//        
+//        
+//
+//    } else {
+//       
+//        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let initialViewControlleripad : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("register") as! UIViewController
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        self.window?.rootViewController = initialViewControlleripad
+//        self.window?.makeKeyAndVisible()
+//
+//        
+//    }
+//    
   return true
     }
 
