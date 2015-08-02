@@ -9,6 +9,6 @@
 import UIKit
 
 
-class UploadViewController: NSObject {
+class UploadViewController: UIViewController {
 
-  }
+}
