@@ -33,7 +33,6 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
-        uploadBtn.hidden = true
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
@@ -42,6 +41,8 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .ScaleAspectFit
             imageView.image = pickedImage
+            
+            uploadBtn.hidden = true
         }
     
         dismissViewControllerAnimated(true, completion: nil)
@@ -74,10 +75,10 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         println("success")
         
         clean()
+        
         uploadBtn.hidden = false
+        
         tabBarController?.selectedIndex = 0
-        
-        
         
     }
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -92,14 +93,7 @@ class ImageUploaderViewController: UIViewController, UIImagePickerControllerDele
         imageView.image = nil
         
     }
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
