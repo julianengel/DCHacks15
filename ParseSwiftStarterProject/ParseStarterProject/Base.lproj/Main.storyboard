@@ -783,6 +783,97 @@
             </objects>
             <point key="canvasLocation" x="1462" y="-1220"/>
         </scene>
+        <!--Register-->
+        <scene sceneID="6zJ-w5-5DZ">
+            <objects>
+                <viewController id="x7z-w2-oFb" customClass="Register" customModule="Fire_Feed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hme-Ao-PGG"/>
+                        <viewControllerLayoutGuide type="bottom" id="lpG-JW-nDj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tu2-lQ-Hkn">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-L9-IY5">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
+                                <color key="textColor" red="1" green="0.16470588235294117" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="102" width="368" height="72"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5rr-Y5-ASN">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="233" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3S-mU-RVt">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="329" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neU-9x-H4E">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Login Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="110" y="474" width="181" height="65"/>
+                                </variation>
+                                <connections>
+                                    <action selector="login" destination="x7z-w2-oFb" eventType="touchUpInside" id="adk-Bg-RL5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAi-QC-8Vv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="121" y="735" width="159" height="45"/>
+                                </variation>
+                                <connections>
+                                    <action selector="register" destination="x7z-w2-oFb" eventType="touchUpInside" id="QjA-ph-Xo7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jQ1-L9-IY5"/>
+                                <exclude reference="5rr-Y5-ASN"/>
+                                <exclude reference="s3S-mU-RVt"/>
+                                <exclude reference="neU-9x-H4E"/>
+                                <exclude reference="UAi-QC-8Vv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jQ1-L9-IY5"/>
+                                <include reference="5rr-Y5-ASN"/>
+                                <include reference="s3S-mU-RVt"/>
+                                <include reference="neU-9x-H4E"/>
+                                <include reference="UAi-QC-8Vv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="EmailField" destination="5rr-Y5-ASN" id="GkZ-FS-yeC"/>
+                        <outlet property="PasswordField" destination="s3S-mU-RVt" id="0Me-Lw-7AZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOP-4Y-sdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1756.5" y="-1020.75"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vPN-jg-MhJ">
             <objects>
@@ -814,6 +905,7 @@
         <image name="Flag" width="32" height="32"/>
         <image name="Flag-Color" width="32" height="32"/>
         <image name="Home" width="32" height="32"/>
+        <image name="Login Button" width="126" height="65"/>
         <image name="Person" width="32" height="32"/>
         <image name="Upvote" width="32" height="32"/>
         <image name="Upvote-Color" width="32" height="32"/>
